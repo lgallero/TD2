@@ -1,0 +1,16 @@
+# Doxyfile para proyecto_descargador
+# Generado para documentar los headers con Doxygen.
+
+PROJECT_NAME           = "proyecto_descargador"
+PROJECT_BRIEF          = "Firmware STM32 para descargador"
+OUTPUT_DIRECTORY       = docs
+OPTIMIZE_OUTPUT_FOR_C  = YES
+JAVADOC_AUTOBRIEF      = YES
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+RECURSIVE              = YES
+FULL_PATH_NAMES        = NO
+INPUT                  = Core/Inc 
+FILE_PATTERNS          = *.c *.h
+EXCLUDE_PATTERNS       = */Startup/* */Debug/* */Middlewares/* */Drivers/*
+GENERATE_LATEX         = NO

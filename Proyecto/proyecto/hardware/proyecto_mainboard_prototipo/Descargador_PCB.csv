@@ -1,0 +1,24 @@
+Reference	Qty	Value	DNP	Exclude from BOM	Exclude from Board	Footprint	Datasheet
+BT1	1	CR2032				Battery:BatteryHolder_MYOUNG_BS-07-A1BJ001_CR2032	
+C1	1	10uf				Capacitor_THT:CP_Radial_D6.3mm_P2.50mm	~
+C5	1	1uf				Capacitor_THT:CP_Radial_D6.3mm_P2.50mm	~
+C6	1	100nf				Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm	~
+D1	1	FSM_STATE				LED_THT:LED_D3.0mm	~
+D2	1	WIFI_STATE				LED_THT:LED_D3.0mm	~
+J1	1	RS485				TerminalBlock:TerminalBlock_bornier-2_P5.08mm	~
+J2	1	UART2_DEBUG				Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical	~
+J3	1	LOAD_POWER				TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm	~
+J4	1	FAN				TerminalBlock:TerminalBlock_bornier-2_P5.08mm	~
+J5	1	LOAD1				TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm	~
+J6	1	INPUTS				TerminalBlock:TerminalBlock_bornier-4_P5.08mm	~
+J7	1	LOAD2				TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm	~
+J8	1	POWER_+12V				TerminalBlock:TerminalBlock_bornier-2_P5.08mm	~
+K1,K2,K3	3	12V COIL				Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C	http://www.sanyourelay.ca/public/products/pdf/SRD.pdf
+K4	1	12V COIL				Relay_THT:Relay_DPST_Omron_G2RL-2A	https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+R1,R2	2	470				Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal	~
+U1	1	L7805				Package_TO_SOT_THT:TO-220-3_Vertical	http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf
+U2	1	ESP01				Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical	
+U3	1	SD MODULE				Connector_PinHeader_1.00mm:PinHeader_1x06_P1.00mm_Vertical	
+U4	1	RS485 CONVERTER				Modules_STM32:RS485_module_headers_P2.54	
+U5	1	YAAJ_BluePill				Blue-pill:YAAJ_BluePill_1	
+U6	1	ULN2003				Package_DIP:DIP-16_W7.62mm_Socket	http://www.ti.com/lit/ds/symlink/uln2003a.pdf

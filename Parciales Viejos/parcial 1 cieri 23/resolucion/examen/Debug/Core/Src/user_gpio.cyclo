@@ -1,0 +1,12 @@
+user_gpio.c:21:6:user_gpio_init	1
+user_gpio.c:26:6:HAL_GPIO_EXTI_Callback	2
+user_gpio.c:37:6:fsm_set_convst_1	1
+user_gpio.c:41:6:fsm_set_convst_0	1
+user_gpio.c:45:6:fsm_set_CS1_1	1
+user_gpio.c:48:6:fsm_set_CS1_0	1
+user_gpio.c:51:6:fsm_set_CS2_1	1
+user_gpio.c:54:6:fsm_set_CS2_0	1
+user_gpio.c:57:6:fsm_set_CS3_1	1
+user_gpio.c:60:6:fsm_set_CS3_0	1
+user_gpio.c:63:6:fsm_set_RD_1	1
+user_gpio.c:66:6:fsm_set_RD_0	1

@@ -1,0 +1,9 @@
+../Core/Src/user_gpio.c:12:6:user_gpio_init	1
+../Core/Src/user_gpio.c:17:6:user_gpio_loop	1
+../Core/Src/user_gpio.c:21:6:HAL_GPIO_EXTI_Callback	1
+../Core/Src/user_gpio.c:26:6:indicador_toggle	1
+../Core/Src/user_gpio.c:31:6:conectar_a_linea	1
+../Core/Src/user_gpio.c:36:6:conectar_a_bateria	1
+../Core/Src/user_gpio.c:41:6:desconectar_carga	1
+../Core/Src/user_gpio.c:46:6:indicador_off	1
+../Core/Src/user_gpio.c:49:6:indicador_on	1

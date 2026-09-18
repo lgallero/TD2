@@ -1,0 +1,10 @@
+../Core/Src/esp8266.c:23:6:esp8266_tick	1
+../Core/Src/esp8266.c:27:13:clear_events	1
+../Core/Src/esp8266.c:31:13:search_str	2
+../Core/Src/esp8266.c:38:17:get_rcv_total_size	2
+../Core/Src/esp8266.c:52:17:get_rcv_size	1
+../Core/Src/esp8266.c:57:13:clean_rx_buffer	1
+../Core/Src/esp8266.c:64:13:copy_to_output_buffer	1
+../Core/Src/esp8266.c:69:6:esp8266_init	1
+../Core/Src/esp8266.c:75:6:esp8266_loop	16
+../Core/Src/esp8266.c:123:10:esp8266_read	4

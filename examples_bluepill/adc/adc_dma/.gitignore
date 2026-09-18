@@ -1,0 +1,15 @@
+*.d
+*.o
+*.a
+*.su
+*.bin
+*.elf
+*.map
+*.cfg
+*.launch
+*.list
+!objects.list
+.mxproject
+.settings/
+.vscode/
+doc/

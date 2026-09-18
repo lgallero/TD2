@@ -1,0 +1,9 @@
+fsm.c:16:10:read_d0_d11	1
+fsm.c:44:13:clearEvents	1
+fsm.c:51:6:fsm_init	1
+fsm.c:60:6:fsm_runCycle	28
+fsm.c:137:6:fsm_tick	1
+fsm.c:141:6:fsm_ev_1	1
+fsm.c:145:6:fsm_guardar_S1	1
+fsm.c:149:6:fsm_guardar_S2	1
+fsm.c:153:6:fsm_guardar_S3	1

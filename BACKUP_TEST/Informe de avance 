@@ -1,0 +1,3 @@
+V1: Version mas estable del codigo. Tx por colas bien pero Rx por polling.
+
+V2: Se implementa Rx por interrupciones pero no anda fluido.

@@ -1,0 +1,9 @@
+image: stronglytyped/arm-none-eabi-gcc
+
+build_master:
+  stage: build
+  script:
+    - find . -name "Debug" -type d -exec sed -i -E 's/(\/.*\/|[A-Z]:\\.*\\)STM32F103C8TX_FLASH.ld/..\/STM32F103C8TX_FLASH.ld/g' {}/makefile \; -exec make all -C {} \;
+  only:
+    refs:
+      - master

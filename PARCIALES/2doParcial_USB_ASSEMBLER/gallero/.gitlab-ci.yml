@@ -1,0 +1,8 @@
+include:
+  - project: 'td2-frh/ci'
+    ref: master
+    file: src/.gitlab-ci.yml
+
+variables:
+  PLATFORM: "bluepill"
+  FIRMWARE_PATH: "resolucion/examen"

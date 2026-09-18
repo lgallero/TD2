@@ -1,0 +1,72 @@
+1. ¿Qué versión de la norma USB admite transmisiones full-duplex? Describa el cableado para dicha versión.
+
+La version de la norma que admite transmisiones full-duplex es la USB 3.0 (SuperSpeed)
+En USB 3.0 usa 2 conductores para alimentacion y 3 pares de trenzados para señales
+   
+    1_ Par diferencial ( D+ / D-)
+    2_ Par para Tx
+    3_ Par para Rx 
+
+Estos 2 ultimos pares para transmicion y recepcion SuperSpeed, permiten una comunicacion simultanea full duplex
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2. ¿Cuál es la frecuencia de atención de un endpoint según su tipo de transferencia en USB 2.0?
+
+En USB 2.0 el tiempo se organiza en frames de 1ms porque es full-speed y el host reparte el ancho de banda entre los diferentes tipos de transferencias
+
+
+En los endpoints de control no tienen frecuencia fija garantizada, el host reserva cada frame una porcion para transferencias de control y dentro de ese tiempo los agenda para las transacciones que hagan falta.
+
+En los endpoints de BULK tampoco tienen frecuencia garantizada y no son periodicos, el host los agarra cuando queda espacio libre en los frames que quedan. Depende de cuanto este cargado el bus.
+
+En los endpoints de interrupt hay frecuencia de transmision y son periodicas. Cada endpoint de este tipo declara un intervalo de servicio en su descripor "bInterval". Dependiendo el tipo de usb, ej: full-speed que el rango de transmision  es de 1ms a 255ms, el host arma el shedule delbus de forma que no se pase de ese intervalo. Si el bInterval es 10, se va a atender cada 10 frames (10ms)
+
+En los endpoints Isochronous son periodicos y de alta prioridad, el host reserva un espacio fijo por frame para cada endpoint isocrono y lo usa para cada frame que venga vacio. En full speed puede envar un paquete por frame, es decir, cada 1 ms
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3. Realice un diagrama de una transacción USB indicando en que parte se envían los datos que el usuario quiere enviar.
+
+Cada transaccion USB se compone de 2 a 3 paquetes:
+
+TOKEN: paquete de control que dice a donde voy a enviar los datos 
+
+DATA: paquetes de datos donde se va a encontrar el payload que es son los datos que el usuario quiere enviar
+
+HANSHAKE: el dispositivo responde con un comando segun si recibio bien, esta ocupado o no soporta
+
+Diagrama:
+Diagrama_transaccion_USB.png
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4. Un device USB mínimo, ¿cuáles y cuántos descriptores debe enviar al host durante la enumeración?
+
+Un divice USB minimo debe enviar:
+
+    1. 1 Descriptor de Dispositivo: Es el primero que pide el host y contiene la informacion basica de comunicacion (Version USB, VIP/PID, tamaño de EP0, numero de configuracion). Es unico por device.
+
+
+    2. 1 Descripor de Configuracion: Especifica la configuracion del dispositivo, es decir, como se alimenta, cuanta corriente consume y el tamaño de todos los descriptores que le siguen.
+
+
+    3. 1 Descriptor de Interfaz: Representa la funcion del dispositivo, si es una interfaz de HID o de datos, etc. El descriptor indica la clase, subclase, protocolo y cuantos endpoints usa para esa interfaz.
+
+
+    4. 1 Descriptor de Endpoint: Todos los endpoints distintos del 0 deben describirse con un descriptor de endpoint, que indica dirección (IN/OUT), tipo de transferencia, tamaño maximo de paquete y latencia.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+5. Explique para qué se utiliza un descriptor de reporte en la clase HID. ¿Qué tipo de información contiene?
+
+En la Clase HID, todos los datos se intercambian mediante reportes. El descriptor de resportes HID es la estructura que el host lee para saber como interpretar esos reportes.
+Este Descriptor describe la estructura de datos: que campos tiene cada reporte, cuantos bits ocupa cada uno, en que orden estan y que representa cada campo (ejes, botones, teclas, etc.).
+De esta forma, el sistema operativo, usando un driver HID generico, puede entender los bytes que recibe de cualquier dispositivo HID solo leyendo su descriptor de reporte.
+
+
+

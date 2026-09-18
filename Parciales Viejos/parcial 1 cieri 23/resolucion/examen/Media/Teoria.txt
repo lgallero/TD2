@@ -1,0 +1,57 @@
+---¿Es posible en I2C conectar dos dispositivos idénticos con idéntica conexión eléctrica al bus?
+Justifique.
+
+No es posible conectar dos dispositivos identicos con identica conexion al bus I2C . 
+Esto se debe a que el bus I2C utiliza direcciones unicas para identificar cada dispositivo conectado.
+Cada dispositivo debe tener una direccion unica.
+
+
+---Nombre las líneas utilizadas en SPI y describa su funcionamiento. ¿Para qué se utilizan los bits
+CPOL y CPHA?
+
+Lineas utilizadas en SPI:
+
+-MISO(MASTER INPUT SLAVE OUT): comunicación del esclavo al maestro.
+-MOSI(MASTER OUT SLAVE INPUT): comunicación del maestro al esclavo.
+-SCK(CLOCK): señal de reloj.
+-SS(SLAVE SELECT): tiene uno para cada esclavo,sirve para seleccionar el dispositivo con el que se va a comunicar.
+
+El Master y el Esclavo deben ser configurados con las mismas caracteristicas de CPOL y CPHA.
+
+-CPOL “Clock Parity” determina la polaridad de la señal de clock:
+    CPOL = 0: en reposo SCK = 0
+    CPOL = 1: en reposo SCK = 1
+
+-CPHA “Clock Phase” determina en qué flanco de clock se captura la señal de datos:
+    CPHA = 0: se captura en los flancos de clock impares.
+    CPHA = 1: se captura en los flancos de clock pares.
+
+---¿Qué tipo de conversor analógico digital utilizaría para digitalizar una señal de 500 MHz de
+ancho de banda? Justifique.
+
+Yo utilizaria un ADC de tipo flash de alta velocidad y ancho de banda.
+es mas costoso, mas grande y mas veloz. Depende mucho de la aplicacion, para que lo vayamos a utilizar.
+
+---¿Por qué es conveniente separar la implementación de una solución de un sistema embebidos en
+los módulos main, periféricos y máquinas de estados?
+
+Utilizar maquinas de estados para controlar el flujo del sistema permite una implementacion mas estructurada y controlada.
+Al separar la implementacion en diferentes modulos, se obtiene un codigo mas organizado y modular. Cada modulo se puede encargar de una funcionalidad.
+
+Reutilizacion de codigo, se logra una mayor independencia del hardware.
+
+---¿En qué difiere la implementación de un master I2C totalmente por código y utilizando el
+periférico (en el caso del STM32F103C8)? ¿En qué casos conviene cada solución?
+
+La implementacion por codigo da un mayor control sobre la comunicacion y permite una mayor flexibilidad en el manejo de los datos. lo malo es que puede requerir mas tiempo y esfuerzo para implementar y depurar.
+Conviene en el caso donde queremos un mayor control de los datos y la comunicacion.
+
+en la utilizacion del periferico el proceso de comunicacion se maneja a nivel de hardware. Solo es necesario configurar los registros y utilizar las funciones de la biblioteca para enviar y recibir datos. 
+ ofrece una implementacion mas rapida y sencilla, pero tiene limitaciones en terminos de flexibilidad y control sobre la comunicacion.
+Conviene en el caso que querramos una implementacion rapida y sensilla.
+
+
+
+
+
+

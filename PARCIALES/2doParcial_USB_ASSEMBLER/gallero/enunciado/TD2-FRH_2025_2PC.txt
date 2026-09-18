@@ -1,0 +1,9 @@
+1. ¿Qué versión de la norma USB admite transmisiones full-duplex? Describa el cableado para dicha versión.
+
+2. ¿Cuál es la frecuencia de atención de un endpoint según su tipo de transferencia en USB 2.0?
+
+3. Realice un diagrama de una transacción USB indicando en que parte se envían los datos que el usuario quiere enviar.
+
+4. Un device USB mínimo, ¿cuáles y cuántos descriptores debe enviar al host durante la enumeración?
+
+5. Explique para qué se utiliza un descriptor de reporte en la clase HID. ¿Qué tipo de información contiene?

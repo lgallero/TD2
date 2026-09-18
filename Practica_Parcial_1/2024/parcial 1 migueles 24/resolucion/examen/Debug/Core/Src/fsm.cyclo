@@ -1,0 +1,9 @@
+../Core/Src/fsm.c:20:10:get_i_bateria_max	1
+../Core/Src/fsm.c:24:10:get_v_bateria_min	1
+../Core/Src/fsm.c:43:13:clearEvents	1
+../Core/Src/fsm.c:49:6:fsm_init	1
+../Core/Src/fsm.c:56:6:fsm_runCycle	49
+../Core/Src/fsm.c:216:6:fsm_tick	1
+../Core/Src/fsm.c:220:6:fsm_ev_pulsador	1
+../Core/Src/fsm.c:224:6:obtener_valores_linea	9
+../Core/Src/fsm.c:250:6:obtener_valores_bat	1
